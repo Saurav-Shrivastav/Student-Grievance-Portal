@@ -3,20 +3,20 @@ import axios from 'axios';
 import Popup from "reactjs-popup";
 import { Link } from 'react-router-dom';
 
-class OthersFilter extends Component{
+class AcademicFilter extends Component{
     state={
         posts: [ ]
     }
    async componentDidMount(){
-      
-       const res=await axios.get('http://localhost:4000/api/issues/?category=Others')
+
+       const res=await axios.get('api/issues/?category=Academics')
                              //fires up only after the data is fetched
             console.log(res);
             this.setState({
-                posts: res.data       
-           
+                posts: res.data
+
         })
-        
+
     }
 render(){
     const { posts}=this.state;
@@ -32,7 +32,7 @@ render(){
                 <div className="card-action">
                    <Popup modal trigger={<a className="pointer">Read more...</a>}>
                    {close=>(
-                        <div><a onClick={close}><i className=" modal-close material-icons right pointer" >clear </i></a> 
+                        <div><a onClick={close}><i className=" modal-close material-icons right pointer" >clear </i></a>
                         <h4 id="subject">{post.subject}</h4>
                           <p id="statement">{post.statement}</p>
                           <h6 className='left'>Posted by: {post.user.email}</h6>
@@ -43,14 +43,14 @@ render(){
                         </div>
                         )}
                    </Popup>
-                    
+
                 </div>
               </div>
             </div>
             </div>
-           
+
         )
-    })):( 
+    })):(
         <div className="center">
         <div className="preloader-wrapper active">
         <div className="spinner-layer spinner-red-only">
@@ -76,8 +76,8 @@ render(){
         </Link>
       </div>
             </div>
-            
+
     )
 }
 }
-export default OthersFilter;
+export default AcademicFilter;

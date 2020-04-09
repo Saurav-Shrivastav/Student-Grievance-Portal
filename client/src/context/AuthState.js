@@ -24,7 +24,7 @@ const AuthState = (props) =>{
        error:null
     };
     const [state, dispatch]= useReducer(authReducer,initialState);
-    
+
     //Load User
      const loadUser = async () =>{
          //console.log(localStorage.token);
@@ -33,11 +33,11 @@ const AuthState = (props) =>{
         }
 
         try {
-            const res = await axios.get('http://localhost:4000/api/users/me');
+            const res = await axios.get('api/users/me');
             // console.log(res.data);
             dispatch({
-                type: USER_LOADED, 
-                payload: res.data 
+                type: USER_LOADED,
+                payload: res.data
             });
         } catch (err) {
             dispatch({ type: AUTH_ERROR})
@@ -122,7 +122,7 @@ const AuthState = (props) =>{
     const clearErrors = () => dispatch({type:CLEAR_ERRORS})
 
     return(
-        <authContext.Provider 
+        <authContext.Provider
         value={{
             token: state.token,
             isAuthenticated: state.isAuthenticated,
