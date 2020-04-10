@@ -17,13 +17,9 @@ We initiated this project after attending a Bootcamp by Developer Student Club o
 
 We've also used Materialize CSS
 
-## Screenshot
-
-![Screenshot](/img/2020-04-10.png)
-
 ## Demo 
 
-![Demo](img/WhatsApp Video 2020-04-10 at 9.21.11 PM.mp4)
+[![Demo video on YouTube](img/2020-04-10.png)](https://youtu.be/6Go91-rAxiY)
 
 ## Installation 
 
