@@ -17,8 +17,9 @@ We initiated this project after attending a Bootcamp by Developer Student Club o
 
 We've also used Materialize CSS
 
-## Screenshots
+## Screenshot
 
+![Screenshot](/img/2020-04-10.png)
 
 ## Installation 
 
