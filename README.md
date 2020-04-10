@@ -21,6 +21,10 @@ We've also used Materialize CSS
 
 ![Screenshot](/img/2020-04-10.png)
 
+## Demo 
+
+![Demo](img/WhatsApp Video 2020-04-10 at 9.21.11 PM.mp4)
+
 ## Installation 
 
 ### Windows
