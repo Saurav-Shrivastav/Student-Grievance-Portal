@@ -13,6 +13,9 @@ const authLinks = (
   <Fragment>
       <li><a href='./profile'>{ user && user.username}</a></li>
       <li>
+        <Link to='myissues'>My Issues</Link>
+      </li>
+      <li>
           <a onClick={onLogout} href=''>
              Logout
           </a>
@@ -34,12 +37,12 @@ return(
     <div className='navbar-fixed'>
     <nav>
     <div>
-  <ul id="sort" className="dropdown-content">
+  {/* <ul id="sort" className="dropdown-content">
         <li><a href="#!">Today</a></li>
         <li><a href="#!">Yesterday</a></li>
         <li><a href="#!">Previous Week</a></li>
         <li><a href="#!">Input</a></li>
-      </ul>
+      </ul> */}
       <ul id="filter" className="dropdown-content">
         <li><Link to='/academics'>Academics</Link></li>
         <li><Link to='/infrastructure'>Infra</Link></li>
@@ -60,11 +63,11 @@ return(
           <i className="material-icons">account_circle</i>
         </a>
       </li>
-      <li style={{ marginRight: 15 }}>
+      {/* <li style={{ marginRight: 15 }}>
         <a href className="dropdown-button" data-activates="sort">
           Sort By<i className="material-icons right">sort</i>
         </a>
-      </li>
+      </li> */}
       <li style={{ marginRight: 15 }}>
         <a href className="dropdown-button" data-activates="filter">
           Filter<i className="material-icons right">more_vert</i>
