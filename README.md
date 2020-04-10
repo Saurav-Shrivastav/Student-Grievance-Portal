@@ -19,7 +19,7 @@ We've also used Materialize CSS
 
 ## Demo 
 
-[![Demo video on YouTube](img/2020-04-10.png)](https://youtu.be/6Go91-rAxiY)
+[![Demo video on YouTube](img/demo-readme.png)](https://youtu.be/6Go91-rAxiY)
 
 ## Installation 
 
