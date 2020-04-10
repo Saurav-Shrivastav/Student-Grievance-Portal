@@ -20,7 +20,7 @@ const IssueState = (props) =>{
             }
         }
         try{
-            const res = await axios.post('api/issues', formData, config);
+            const res = await axios.post('/api/issues', formData, config);
             console.log(res.data);
             dispatch({
                 type: ADD_ISSUE,
@@ -41,7 +41,7 @@ const IssueState = (props) =>{
     }
 
     return(
-        <issueContext.Provider
+        <issueContext.Provider 
         value={{
             issue:state.issue,
             error:state.error,

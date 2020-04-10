@@ -24,7 +24,7 @@ const AuthState = (props) =>{
        error:null
     };
     const [state, dispatch]= useReducer(authReducer,initialState);
-
+    
     //Load User
      const loadUser = async () =>{
          //console.log(localStorage.token);
@@ -33,11 +33,11 @@ const AuthState = (props) =>{
         }
 
         try {
-            const res = await axios.get('api/users/me');
+            const res = await axios.get('/api/users/me');
             // console.log(res.data);
             dispatch({
-                type: USER_LOADED,
-                payload: res.data
+                type: USER_LOADED, 
+                payload: res.data 
             });
         } catch (err) {
             dispatch({ type: AUTH_ERROR})
@@ -52,7 +52,7 @@ const AuthState = (props) =>{
             }
         }
         try{
-            const res = await axios.post('http://localhost:4000/api/users', formData, config);
+            const res = await axios.post('/api/users', formData, config);
             // console.log(res.data.token);
             dispatch({
                 type: REGISTER_SUCCESS,
@@ -76,7 +76,7 @@ const AuthState = (props) =>{
             }
         }
         try{
-            const res = await axios.post('http://localhost:4000/api/auth', formData, config);
+            const res = await axios.post('/api/auth', formData, config);
             // console.log(res.data);
 
             dispatch({
@@ -99,7 +99,7 @@ const AuthState = (props) =>{
             }
         }
         try{
-            const res = await axios.put('http://localhost:4000/api/users/me', formData, config);
+            const res = await axios.put('/api/users/me', formData, config);
             // console.log(res.data.token);
             dispatch({
                 type: UPDATE_SUCCESS,
@@ -122,7 +122,7 @@ const AuthState = (props) =>{
     const clearErrors = () => dispatch({type:CLEAR_ERRORS})
 
     return(
-        <authContext.Provider
+        <authContext.Provider 
         value={{
             token: state.token,
             isAuthenticated: state.isAuthenticated,
