@@ -15,6 +15,7 @@ import InfraFilter from './components/InfraFilter';
 import ServicesFilter from './components/ServicesFilter';
 import OthersFilter from './components/OthersFilter';
 import IssueState from './context/IssueState';
+import MyIssues from './components/MyIssues';
 
 if(localStorage.token){
   SetAuthToken(localStorage.token);
@@ -41,6 +42,7 @@ class App extends Component{
         <Route exact path='/infrastructure' component={InfraFilter} />
         <Route exact path='/services' component={ServicesFilter} />
         <Route exact path='/others' component={OthersFilter} />
+        <Route exact path='/myissues' component={MyIssues} />
         </Switch>
         
       </div>

@@ -28,7 +28,7 @@ router.get('/',async (req,res)=>{
 })
 
 // get issues posted by the currently logined user
-router.get('/myissues',auth,async (req,res)=>{
+router.get('/me/myissues',auth,async (req,res)=>{
     const issues = await Issue.find( { user_id:req.user._id } );
     if(!issues) return res.status(404).send('Not Found');
     res.send(issues);
