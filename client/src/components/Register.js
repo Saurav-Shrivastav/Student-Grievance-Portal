@@ -1,5 +1,6 @@
 import React, { Fragment, useContext ,useState, useEffect} from 'react';
 import AuthContext from '../context/AuthContext';
+import ParticlesBg from "particles-bg";
 
 const Register = (props) => {
     const authContext = useContext(AuthContext);
@@ -80,6 +81,7 @@ const Register = (props) => {
         </div>
       </div>
       </div>
+      <ParticlesBg type="fountain" bg={true}/>
       </Fragment>
     )
 }

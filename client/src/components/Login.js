@@ -1,6 +1,7 @@
 import React, {Fragment, useEffect, useState, useContext} from 'react';
 import AuthContext from '../context/AuthContext';
-import alertContext from '../context/alertContext'
+import alertContext from '../context/alertContext';
+import ParticlesBg from "particles-bg";
 
 const Login = (props)=> {
     const authContext = useContext(AuthContext);
@@ -40,7 +41,7 @@ const Login = (props)=> {
     return (
         <Fragment>
         <div class="container">
-    <div class="row">
+        <div class="row">
         <div class="col s12">
           <div class="card grey lighten-1">
             <div class="card-content black-text">
@@ -72,6 +73,7 @@ const Login = (props)=> {
         </div>
       </div>
       </div>
+      <ParticlesBg type="polygon" bg={true}/>
       </Fragment>
     )
 }
